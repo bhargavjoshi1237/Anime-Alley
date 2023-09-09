@@ -1,0 +1,27 @@
+@media screen and (min-width: 0px) and (max-width: 700px) {
+/* this is laptop */
+    #crx { display: none; } 
+    #mob {display: block; }
+    #navlap {display: none; }
+    #navphone {display: block; }
+    #serphone{display: block; }
+    #serlaptop{display: none; }
+    #opds{display: none; }
+    #canx{display: none; }
+    #canv{display: block; }
+  }
+  
+  @media screen and (min-width: 701px) {
+       /* block is  hide  */
+       /* none is visible */
+       /* this is phone */
+       #crx { display: block; } 
+       #mob { display: none; }
+       #navlap {display: block; }
+       #navphone {display: none; }
+       #serphone{display: none; }
+    #serlaptop{display: block; }
+    #opds{display: block; }
+    #canx{display: block; }
+    #canv{display: none; }
+  }
