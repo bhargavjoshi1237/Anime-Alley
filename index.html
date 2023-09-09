@@ -234,7 +234,7 @@
 
     <div id="serphone" style="height: fit-content; width: 90%; background-color: white;">
       <div class="search">
-      <input type="text" class="search__input" placeholder="Search Anime" id="serch" onkeydown="sx(this)"></div>
+      <input type="text" class="search__input" placeholder="Search Anime" id="serche" onkeydown="sxx(this)"></div>
       </div>
 
 </div>
@@ -854,6 +854,12 @@
 function sx(ele) {
     if(event.key === 'Enter') {
       opr("search_parms.html?q="+$("#serch").val())          
+    }
+}
+
+function sxx(ele) {
+    if(event.key === 'Enter') {
+      opr("search_parms.html?q="+$("#serche").val())          
     }
 }
 
