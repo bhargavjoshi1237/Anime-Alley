@@ -899,11 +899,11 @@ fetch("https://api.jikan.moe/v4/top/anime?filter=upcoming")
    $('#upct6').text(data["data"][5]["title"].slice(0,30))
 
    $("#upci7").attr("src",data["data"][0]["images"]["jpg"]["image_url"]);
-   $('#upct7').text(data["data"][0]["title"].slice(0,30))
+   $('#upct7').text(data["data"][0]["title"].slice(0,15))
    $("#upci8").attr("src",data["data"][1]["images"]["jpg"]["image_url"]);
-   $('#upct8').text(data["data"][1]["title"].slice(0,30))
+   $('#upct8').text(data["data"][1]["title"].slice(0,15))
    $("#upci9").attr("src",data["data"][2]["images"]["jpg"]["image_url"]);
-   $('#upct9').text(data["data"][2]["title"].slice(0,30))
+   $('#upct9').text(data["data"][2]["title"].slice(0,15))
    $("#upci10").attr("src",data["data"][3]["images"]["jpg"]["image_url"]);
    $('#upct10').text(data["data"][3]["title"].slice(0,30))
    $("#upci11").attr("src",data["data"][4]["images"]["jpg"]["image_url"]);
