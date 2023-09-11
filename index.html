@@ -977,9 +977,9 @@ $("#revuser3").attr("src",data["data"][2]["user"]["images"]["webp"]["image_url"]
   })
   
   
-  
-
-  fetch("https://api.jikan.moe/v4/watch/episodes")
+  setTimeout(() => {
+    console.log("OK")
+      fetch("https://api.jikan.moe/v4/watch/episodes")
   .then(function(response){
 
     return response.json();
@@ -1025,6 +1025,9 @@ $("#revuser3").attr("src",data["data"][2]["user"]["images"]["webp"]["image_url"]
 
   })
 
+}, 400);
+
+  
   fetch("https://api.jikan.moe/v4/seasons/now")
   .then(function(response){
 
@@ -1102,8 +1105,10 @@ $("#revuser3").attr("src",data["data"][2]["user"]["images"]["webp"]["image_url"]
   }
 
   })
-  
-  
+
+
+
+	
 
   setTimeout(() => {
     console.log("OK")
