@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-   <link rel="icon" type="image/x-icon" href="/images/ico.png">
-   <meta name="description" content=" Discover the ultimate anime info hub where you'll find everything you need about your favorite shows. From plot summaries and character profiles to episode guides and reviews, we've got it all covered. Dive into the world of anime with confidence, knowing you can rely on us for all the latest updates and in-depth information. Explore your favorite anime like never before at our one-stop destination!">
-    <meta name="keywords" content="recommendation, anime recommendation, suggestion, suggest, anim e, one piece, naruto, chainsaw man, jujutsu kaisen, my hero academia,">
-
+    <link rel="icon" type="image/x-icon" href="/images/ico.png">
+    <meta name="description" content=" Discover the ultimate anime info hub where you'll find everything you need about your favorite shows. From plot summaries and character profiles to episode guides and reviews, we've got it all covered. Dive into the world of anime with confidence, knowing you can rely on us for all the latest updates and in-depth information. Explore your favorite anime like never before at our one-stop destination!">
+     <meta name="keywords" content="recommendation, anime recommendation, suggestion, suggest, anim e, one piece, naruto, chainsaw man, jujutsu kaisen, my hero academia,">
+ 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
    
     <link rel="stylesheet" href="index.css">
@@ -43,7 +43,7 @@
 <link rel="stylesheet" href="this.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <meta charset="utf-8">
-  <title>Anime Alley - The Best Anime Recommendation And Info Site.</title>
+  <title>Anime Alley - The Best Anime Recomandation And Info Site.</title>
   <script src="index.js"></script>
 <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
 
@@ -67,12 +67,12 @@
    
    
     <img width="30" class="float-right pop" height="30" style="margin-right: 20px; "  src="https://img.icons8.com/windows/64/FFFFFF/user-male-circle.png" alt="user-male-circle"/>
-    <a href="search.html"><p class="float-right pop"  style="color: rgb(200, 200, 200); padding-right: 2.5%;font-family: 'Openr', sans-serif; ">Scheduled</p></a>
-    <a href="search.html"><p class="float-right pop"  style="color: rgb(200, 200, 200); padding-right: 2.5%;font-family: 'Openr', sans-serif; ">Updated</p></a>   
-    <a href="search.html"><p class="float-right pop"  style="color: rgb(200, 200, 200); padding-right: 2.5%;font-family: 'Openr', sans-serif; ">Recently Added</p></a>
-    <a href="search.html"><p class="float-right pop"  style="color: rgb(200, 200, 200); padding-right: 2.5%;font-family: 'Openr', sans-serif; ">Upcoming</p></a> 
-    <a href="search.html"><p class="float-right pop"  style="color: rgb(200, 200, 200); padding-right: 2.5%;font-family: 'Openr', sans-serif; ">Airing</p></a>
-    <a href="search.html"><p class="float-right pop"  style="color: rgb(200, 200, 200); padding-right: 2.5%;font-family: 'Openr', sans-serif; ">Genres</p></a>
+    <a href="sp.html"><p class="float-right pop"  style="color: rgb(200, 200, 200); padding-right: 2.5%;font-family: 'Openr', sans-serif; ">Scheduled</p></a>
+    <a href="sp.html"><p class="float-right pop"  style="color: rgb(200, 200, 200); padding-right: 2.5%;font-family: 'Openr', sans-serif; ">Updated</p></a>   
+    <a href="sp.html"><p class="float-right pop"  style="color: rgb(200, 200, 200); padding-right: 2.5%;font-family: 'Openr', sans-serif; ">Recently Added</p></a>
+    <a href="sp.html"><p class="float-right pop"  style="color: rgb(200, 200, 200); padding-right: 2.5%;font-family: 'Openr', sans-serif; ">Upcoming</p></a> 
+    <a href="sp.html"><p class="float-right pop"  style="color: rgb(200, 200, 200); padding-right: 2.5%;font-family: 'Openr', sans-serif; ">Airing</p></a>
+    <a href="sp.html"><p class="float-right pop"  style="color: rgb(200, 200, 200); padding-right: 2.5%;font-family: 'Openr', sans-serif; ">Genres</p></a>
    
   </div>
 
@@ -843,7 +843,7 @@
 
 <p  style="font-family: 'Openr' ; color: #5e5e5e; font-size: 14px; padding-left: 30px;"  >Made with ❤ for anime Lovers By Jack</p>
   </div>
-<h1>Anime Alley - The Best Anime Recommendation And Info Site.</h1>
+
   </center>
   <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 </body>
@@ -945,7 +945,7 @@ fetch("https://api.jikan.moe/v4/top/anime?filter=upcoming")
           // }
             
         })
-
+        setTimeout(() => {
  fetch("https://api.jikan.moe/v4/reviews/anime")
   .then(function(response){
 
@@ -975,11 +975,11 @@ $("#revuser2").attr("src",data["data"][1]["user"]["images"]["webp"]["image_url"]
 $("#revuser3").attr("src",data["data"][2]["user"]["images"]["webp"]["image_url"]);
 
   })
+  }, 400);
   
   
   setTimeout(() => {
-    console.log("OK")
-      fetch("https://api.jikan.moe/v4/watch/episodes")
+  fetch("https://api.jikan.moe/v4/watch/episodes")
   .then(function(response){
 
     return response.json();
@@ -1023,11 +1023,8 @@ $("#revuser3").attr("src",data["data"][2]["user"]["images"]["webp"]["image_url"]
     $('#rect13').text(data["data"][12]["entry"]["title"])
    
 
-  })
-
-}, 400);
-
-  
+  })}, 900);
+  setTimeout(() => {
   fetch("https://api.jikan.moe/v4/seasons/now")
   .then(function(response){
 
@@ -1070,8 +1067,8 @@ $("#revuser3").attr("src",data["data"][2]["user"]["images"]["webp"]["image_url"]
     }
   
 
-  })
-
+  })}, 1300);
+  setTimeout(() => {
   fetch("https://api.jikan.moe/v4/top/anime?filter=airing")
   .then(function(response){
 
@@ -1105,11 +1102,10 @@ $("#revuser3").attr("src",data["data"][2]["user"]["images"]["webp"]["image_url"]
   }
 
   })
+  
+  }, 1700);
 
-
-
-	
-
+   
   setTimeout(() => {
     console.log("OK")
     
@@ -1177,7 +1173,7 @@ $("#revuser3").attr("src",data["data"][2]["user"]["images"]["webp"]["image_url"]
   
 
   })
-}, 1500);
+}, 2100);
 
 setTimeout(() => {
     console.log("OK")
