@@ -927,7 +927,8 @@ fetch("https://api.jikan.moe/v4/top/anime?filter=upcoming")
    $('#upcg12').text("Genres: "+data["data"][0]["genres"][2]["name"]+" & "+data["data"][0]["genres"][1]["name"])
 
     for (let i = 0; i < 6; i++) {
-      upc.push(("/Anime/"+data["data"][i]["mal_id"]))
+      // upc.push(("anime.html?id="+data["data"][i]["mal_id"]))
+      $("#upci"+i).attr("onclick","/Anime/"+data["data"][i]["mal_id"]+".html");
       
     }
   //  for (let i = 0; i < 4; i++) {
