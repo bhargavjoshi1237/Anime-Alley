@@ -1120,7 +1120,7 @@ $("#revuser3").attr("src",data["data"][2]["user"]["images"]["webp"]["image_url"]
     
   })
   .then(function(data){
-    for (let i = 1; i < 7; i++) {
+    for (let i = 0; i < 7; i++) {
       // tp.push("anime.html?id="+data["data"][i]["mal_id"])
       console.log("/Anime/"+data["data"][i]["mal_id"])
       $("#xpox"+i).attr("href", "Anime/"+data["data"][i]["mal_id"]);
