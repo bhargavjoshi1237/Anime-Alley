@@ -927,7 +927,7 @@ fetch("https://api.jikan.moe/v4/top/anime?filter=upcoming")
    $('#upcg12').text("Genres: "+data["data"][0]["genres"][2]["name"]+" & "+data["data"][0]["genres"][1]["name"])
 
     for (let i = 0; i < 6; i++) {
-      upc.push(("anime.html?id="+data["data"][i]["mal_id"]))
+      upc.push(("/Anime/"+data["data"][i]["mal_id"]))
       
     }
   //  for (let i = 0; i < 4; i++) {
@@ -1005,7 +1005,7 @@ $("#revuser3").attr("src",data["data"][2]["user"]["images"]["webp"]["image_url"]
     $("#rec14").attr("src",data["data"][13]["entry"]["images"]["webp"]["image_url"]);
    
     for (let i = 0; i < 14; i++) {
-      recs.push("anime.html?id="+data["data"][i]["entry"]["mal_id"])
+      recs.push("/Anime/"+data["data"][i]["entry"]["mal_id"])
     }
     
 
@@ -1063,7 +1063,7 @@ $("#revuser3").attr("src",data["data"][2]["user"]["images"]["webp"]["image_url"]
     
     for (let i = 0; i < 8; i++) {
       
-      sec.push("anime.html?id="+data["data"][i]["mal_id"])
+      sec.push("/Anime/"+data["data"][i]["mal_id"])
       
     }
   
@@ -1098,7 +1098,7 @@ $("#revuser3").attr("src",data["data"][2]["user"]["images"]["webp"]["image_url"]
     $('#airtxt7').text(data["data"][0]["title"])
     
   for (let i = 0; i < 8; i++) {
-    air.push("anime.html?id="+data["data"][i]["mal_id"])
+    air.push("/Anime/"+data["data"][i]["mal_id"])
     
   }
 
@@ -1167,7 +1167,7 @@ $("#revuser3").attr("src",data["data"][2]["user"]["images"]["webp"]["image_url"]
     }
     
     for (let i = 0; i < 7; i++) {
-      tp.push("anime.html?id="+data["data"][i]["mal_id"])
+      tp.push("/Anime/"+data["data"][i]["mal_id"])
       
     }
     
@@ -1211,7 +1211,7 @@ setTimeout(() => {
 
 
     for (let i = 0; i < 5; i++) {
-      mov.push("anime.html?id="+data["data"][i]["mal_id"])
+      mov.push("/Anime/"+data["data"][i]["mal_id"])
       
     }
 
