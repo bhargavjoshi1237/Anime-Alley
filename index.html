@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <link rel="icon" type="image/x-icon" href="ico.png">
+    <link rel="icon" type="image/x-icon" href="/images/ico.png">
     <meta name="description" content=" Discover the ultimate anime info hub where you'll find everything you need about your favorite shows. From plot summaries and character profiles to episode guides and reviews, we've got it all covered. Dive into the world of anime with confidence, knowing you can rely on us for all the latest updates and in-depth information. Explore your favorite anime like never before at our one-stop destination!">
      <meta name="keywords" content="recommendation, anime recommendation, suggestion, suggest, anim e, one piece, naruto, chainsaw man, jujutsu kaisen, my hero academia,">
  
@@ -768,31 +768,31 @@
 <div style="height: 60px;"></div>
 <div class="row" style="width: 78%; ">
   
-<div class="col-xl pop" >  <a id="xpox1"  href="">
+<div class="col-xl pop" >  <a id="xpox0"  href="">
     <img id="recm1" src="https://cdn.myanimelist.net/images/anime/1792/138022.jpg" style="width: 180px;" alt="">
     <p id="recmt1" class="xp"> Jujutsu Kaisen 2nd Season</p></a>
   </div>
-  <div class="col-xl pop" ><a id="xpox2" href="">
+  <div class="col-xl pop" ><a id="xpox1" href="">
     <img id="recm2"  src="https://cdn.myanimelist.net/images/anime/1898/138005.jpg" style="width: 180px;" alt="">
     <p  id="recmt2" class="xp">The Antarctic</p></a>
   </div>
-  <div class="col-xl pop" ><a id="xpox3" href="">
+  <div class="col-xl pop" ><a id="xpox2" href="">
     <img id="recm3"  src="https://cdn.myanimelist.net/images/anime/1384/136408.jpg" style="width: 180px;" alt="">
     <p  id="recmt3" class="xp">Mushoku Tensei: Jobless</p></a>
   </div>
-  <div class="col-xl pop"><a id="xpox4" href="">
+  <div class="col-xl pop"><a id="xpox3" href="">
     <img  id="recm4" src="https://cdn.myanimelist.net/images/anime/1007/136277.jpg" style="width: 180px;"  alt="">
     <p  id="recmt4" class="xp">Zom 100: Bucket List of the Dead</p></a>
   </div>
-  <div class="col-xl pop" ><a id="xpox5" href="">
+  <div class="col-xl pop" ><a id="xpox4" href="">
     <img  id="recm5" src="https://cdn.myanimelist.net/images/anime/1164/138058.jpg" style="width: 180px;"  alt="">
     <p  id="recmt5" class="xp">Bleach: Thousand-Year Blood War </p></a>
   </div>
- <div class="col-xl pop" > <a id="xpox6" href="">
+ <div class="col-xl pop" > <a id="xpox5" href="">
     <img  id="recm6" src="https://cdn.myanimelist.net/images/anime/1147/122444.jpg" style="width: 180px;"  alt="">
     <p  id="recmt6" class="xp">The Antarctic</p></a>
   </div>
-  <div class="col-xl pop" ><a id="xpox7" href="">
+  <div class="col-xl pop" ><a id="xpox6" href="">
     <img id="recm7"  src="https://cdn.myanimelist.net/images/anime/1667/135587.jpg" style="width: 180px;"  alt="">
     <p  id="recmt7" class="xp">Masamune-kun no Revenge R</p></a>
   </div>
@@ -928,7 +928,7 @@ fetch("https://api.jikan.moe/v4/top/anime?filter=upcoming")
 
     for (let i = 0; i < 6; i++) {
       upc.push(("anime.html?id="+data["data"][i]["mal_id"]))
-      // $("xpo"+i).attr("onclick",window.open("/Anime/"+data["data"][i]["mal_id"]+".html"));
+      
       
       console.log()
       
@@ -1120,7 +1120,7 @@ $("#revuser3").attr("src",data["data"][2]["user"]["images"]["webp"]["image_url"]
     
   })
   .then(function(data){
-    for (let i = 0; i < 7; i++) {
+    for (let i = 1; i < 7; i++) {
       // tp.push("anime.html?id="+data["data"][i]["mal_id"])
       console.log("/Anime/"+data["data"][i]["mal_id"])
       $("#xpox"+i).attr("href", "Anime/"+data["data"][i]["mal_id"]);
