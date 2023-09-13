@@ -338,6 +338,7 @@ fetch(ur)
     
   })
   .then(function(data){
+ 
      for (let i = 0; i < data["data"]["titles"].length;  i++) {
       console.log()
      if (data["data"]["titles"][i]["type"] == "English") {
@@ -356,7 +357,7 @@ fetch(ur)
     ytl = data["data"]["trailer"]["url"];
     malx = 'https://myanimelist.net/anime/'+data["data"]["mal_id"];
     $('#title').text(data["data"]["title"])
-    document.title = data["data"]["title"]+' | Anime Alley';
+   
     $('#titles').text(data["data"]["title"])
 
     // console.log(data["data"]["images"]["jpg"]["image_url"]);
