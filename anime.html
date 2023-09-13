@@ -419,7 +419,7 @@ fetch(ur)
         
         for (let j = 0; j < Object.keys(data["data"]).length; j++) {
           if (fav[i] == data["data"][j]["favorites"] ) {
-         
+          $("#ch"+i).attr("href", "character.html?id="+data["data"][j]["character"]["mal_id"])
           $('#charimg'+i).attr("src",data["data"][j]["character"]["images"]["jpg"]["image_url"]);
           $('#charimg'+i).attr("alt",data["data"][j]["character"]["name"]);
           // console.log(data["data"][j]["character"]["images"]["jpg"]["image_url"]);
