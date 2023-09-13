@@ -257,27 +257,27 @@
 <br>
 <h2 id="headin" class="xp" style="width: 90%; font-family: 'Openr';font-size: 15px;color: white;">Spoiler Review</h2>
 <br>
-<p id="reve1" class="xp" style="width: 90%; font-family: 'Openr';font-size: 15px;color: white;"></p>
+<p id="reve1" class="xp" align="left" style="width: 90%; font-family: 'Openr';font-size: 15px;color: white;"></p>
   <br>
 
     <h2 class="xp" style="width: 90%; font-family: 'Openr';font-size: 15px;color: white;">Reviews: on Rewatch 1</h2>
   
-  <p id="reve2" class="xp" style="width: 90%; font-family: 'Openr';font-size: 15px;color: white;"></p>
+  <p id="reve2" class="xp" align="left" style="width: 90%; font-family: 'Openr';font-size: 15px;color: white;"></p>
   <br>
 <h2 id="isgood" class="xp" style="width: 90%; font-family: 'Openr';font-size: 15px;color: white;">Is Masamune-kun's Revenge R Good? Or Worth Watching?</h2>
   
-  <p id="reve3" class="xp" style="width: 90%; font-family: 'Openr';font-size: 15px;color: white;">
+  <p id="reve3" class="xp" align="left" style="width: 90%; font-family: 'Openr';font-size: 15px;color: white;">
 </div>
     
     </p>
     <br>
     <h2 class="xp" style="width: 90%; font-family: 'Openr';font-size: 15px;color: white;">Should You Watch This Anime?</h2>
-    <p id="reve4" class="xp" style="width: 90%; font-family: 'Openr';font-size: 15px;color: white;"></p>  
+    <p id="reve4" class="xp" align="left" style="width: 90%; font-family: 'Openr';font-size: 15px;color: white;"></p>  
       <br>
     
     <br> 
   <h2 class="xp" style="width: 90%; font-family: 'Openr';font-size: 15px;color: white;">Review On: English Dubbed And Subtitle</h2>
-  <p id="reve5" class="xp" style="width: 90%; font-family: 'Openr';font-size: 15px;color: white;">
+  <p id="reve5" class="xp" align="left" style="width: 90%; font-family: 'Openr';font-size: 15px;color: white;">
 </p>
   <br>
 <h2 id="scores" style="color: #f3ce13 ;font-family: 'Openr'; ">My Score: 9/10</h2>
@@ -451,15 +451,15 @@ fetch(ur)
       console.log()
      if (data["data"]["titles"][i]["type"] == "English") {
       console.log()
-      $('#names').text("My Spacial Review On "+data["data"]["titles"][i]["title"])
+      // $('#names').text("My Spacial Review On "+data["data"]["titles"][i]["title"])
       wv = data["data"]["titles"][i]["title"].replace('-', ' ')
       wv = wv.replace('-', ' ')
       
-      document.title = 'Reviews - ' + wv+' Worth Watching?' + " - Anime Alley";
+      document.title = wv+'Review - Worth Watching?';
      }
      else
     {
-      document.title = 'Reviews - ' + data["data"]["title"]+' Worth Watching?' + " - Anime Alley";
+      document.title = 'Reviews - ' + data["data"]["title"]+' Worth Watching?';
     }
      }
     
@@ -546,7 +546,7 @@ fetch(ur)
         
         for (let j = 0; j < Object.keys(data["data"]).length; j++) {
           if (fav[i] == data["data"][j]["favorites"] ) {
-          $("#ch"+i).attr("href", "character.html?id="+data["data"][j]["character"]["mal_id"])
+          $("#ch"+i).attr("href", "/character/"+data["data"][j]["character"]["mal_id"])
           $('#charimg'+i).attr("src",data["data"][j]["character"]["images"]["jpg"]["image_url"]);
           $('#charimg'+i).attr("alt",data["data"][j]["character"]["name"]);
           // console.log(data["data"][j]["character"]["images"]["jpg"]["image_url"]);
