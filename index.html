@@ -316,32 +316,32 @@
   <div style="height: 60px;"></div>
   <div class="row" style="width: 78%; ">
     <div class="col-xl pop" onclick="opr(sec[0])">
-      <img id="secimg1" src="https://cdn.myanimelist.net/images/anime/1792/138022.jpg" style="width: 180px;" alt="">
-      <p id="sectxt1" class="xp"> Jujutsu Kaisen 2nd Season</p>
+       <a id="sh1" href=""><img id="secimg1" src="https://cdn.myanimelist.net/images/anime/1792/138022.jpg" style="width: 180px;" alt="">
+      <p id="sectxt1" class="xp"> Jujutsu Kaisen 2nd Season</p></a>
     </div>
   <div class="col-xl pop" onclick="opr(sec[1])">
-      <img id="secimg2" src="https://cdn.myanimelist.net/images/anime/1898/138005.jpg" style="width: 180px;" alt="">
-      <p id="sectxt2" class="xp">The Antarctic</p>
+       <a id="sh2" href=""><img id="secimg2" src="https://cdn.myanimelist.net/images/anime/1898/138005.jpg" style="width: 180px;" alt="">
+      <p id="sectxt2" class="xp">The Antarctic</p></a>
     </div>
   <div class="col-xl pop" onclick="opr(sec[2])">
-      <img  id="secimg3"  src="https://cdn.myanimelist.net/images/anime/1384/136408.jpg" style="width: 180px;" alt="">
-      <p id="sectxt3" class="xp">Mushoku Tensei: Jobless</p>
+     <a id="sh3" href="">  <img  id="secimg3"  src="https://cdn.myanimelist.net/images/anime/1384/136408.jpg" style="width: 180px;" alt="">
+      <p id="sectxt3" class="xp">Mushoku Tensei: Jobless</p></a>
     </div>
   <div class="col-xl pop" onclick="opr(sec[3])">
-      <img id="secimg4"  src="https://cdn.myanimelist.net/images/anime/1007/136277.jpg" style="width: 180px;"  alt="">
-      <p  id="sectxt4" class="xp">Zom 100: Bucket List of the Dead</p>
+      <a id="sh4" href=""> <img id="secimg4"  src="https://cdn.myanimelist.net/images/anime/1007/136277.jpg" style="width: 180px;"  alt="">
+      <p  id="sectxt4" class="xp">Zom 100: Bucket List of the Dead</p></a>
     </div>
   <div class="col-xl pop" onclick="opr(sec[4])">
-      <img id="secimg5"  src="https://cdn.myanimelist.net/images/anime/1164/138058.jpg" style="width: 180px;"  alt="">
-      <p  id="sectxt5" class="xp">Bleach: Thousand-Year Blood War </p>
+      <a id="sh5" href=""> <img id="secimg5"  src="https://cdn.myanimelist.net/images/anime/1164/138058.jpg" style="width: 180px;"  alt="">
+      <p  id="sectxt5" class="xp">Bleach: Thousand-Year Blood War </p></a>
     </div>
   <div class="col-xl pop" onclick="opr(sec[5])">
-      <img id="secimg6"  src="https://cdn.myanimelist.net/images/anime/1147/122444.jpg" style="width: 180px;"  alt="">
-      <p  id="sectxt6" class="xp">The Antarctic</p>
+     <a id="sh6" href="">  <img id="secimg6"  src="https://cdn.myanimelist.net/images/anime/1147/122444.jpg" style="width: 180px;"  alt="">
+      <p  id="sectxt6" class="xp">The Antarctic</p></a>
     </div>
   <div class="col-xl pop" onclick="opr(sec[6])">
-      <img id="secimg7"  src="https://cdn.myanimelist.net/images/anime/1667/135587.jpg" style="width: 180px;"  alt="">
-      <p  id="sectxt7" class="xp">Masamune-kun no Revenge R</p>
+    <a id="sh7" href="">   <img id="secimg7"  src="https://cdn.myanimelist.net/images/anime/1667/135587.jpg" style="width: 180px;"  alt="">
+      <p  id="sectxt7" class="xp">Masamune-kun no Revenge R</p></a>
     </div>
     
     </div>
@@ -1138,6 +1138,11 @@
     .then(function(data){
       // console.log(data["data"][0]["images"]["webp"]["image_url"])
       console.log("OK")
+
+  for (let j = 0; j < Object.keys(data["data"]).length; j++) {
+          
+          $("#sh"+j).attr("href", "anime.html?id="+data["data"][j]["mal_id"]) })
+      
       $("#secimg1").attr("src",data["data"][0]["images"]["jpg"]["image_url"]);
       $("#secimg2").attr("src",data["data"][1]["images"]["jpg"]["image_url"]);
       $("#secimg3").attr("src",data["data"][2]["images"]["jpg"]["image_url"]);
