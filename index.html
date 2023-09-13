@@ -1139,9 +1139,15 @@
       // console.log(data["data"][0]["images"]["webp"]["image_url"])
       console.log("OK")
 
-  for (let j = 0; j < Object.keys(data["data"]).length; j++) {
+  for (let i = 0; i < 8).length; i++) {
           
-          $("#sh"+j).attr("href", "anime.html?id="+data["data"][j]["mal_id"]) })
+          $("#sh"+j).attr("href", "anime.html?id="+data["data"][i]["mal_id"]) }
+
+    // for (let i = 0; i < 8; i++) {
+        
+    //     sec.push("anime.html?id="+data["data"][i]["mal_id"])
+        
+    //   }
       
       $("#secimg1").attr("src",data["data"][0]["images"]["jpg"]["image_url"]);
       $("#secimg2").attr("src",data["data"][1]["images"]["jpg"]["image_url"]);
