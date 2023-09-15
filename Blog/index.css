@@ -1,0 +1,100 @@
+@media screen and (min-width: 0px) and (max-width: 1100px) {
+/* this is laptop */
+    #mainimg {display: none;}
+    #opk {display: block;}
+   
+    #opp {display: none;}
+    #forpc {display: none;}
+    #forphone {display: block;}
+    #crx { display: none; } 
+    #xpp { display: none; } 
+    #rel { display: none; } 
+    #mob {display: block; }
+    #navlap {display: none; }
+    #navphone {display: block; }
+    #serphone{display: block; }
+    #serlaptop{display: none; }
+    #opds{display: none; }
+    #canx{display: none; }
+    #canv{display: block; }
+
+    #vrx{display: none; }
+    #hrx{display: block; }
+
+    #log{display: none; }
+    #logs{display: block; }
+
+  }
+  
+  @media screen and (min-width: 1101px) {
+   
+       /* block is  hide  */
+       #log{display: block; }
+    #logs{display: none; }
+       /* none is visible */
+       /* this is phone */
+       #vrx{display: block; }
+       #hrx{display: none; }
+ 
+       #opk {display: none;}
+       #opp {display: block;}
+       #mainimg {display: block;}
+       #forphone {display: none;}
+       #forpc {display: block;}
+       #xpp { display: block; } 
+       #rel { display: block; } 
+       #crx { display: block; } 
+       #mob { display: none; }
+       #navlap {display: block; }
+       #navphone {display: none; }
+       #serphone{display: none; }
+    #serlaptop{display: block; }
+    #opds{display: block; }
+    #canx{display: block; }
+    #canv{display: none; }
+  }
+
+  .Btn {
+    width: 130px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(15, 15, 15);
+    border: none;
+    color: white;
+    font-weight: 600;
+    gap: 8px;
+    cursor: pointer;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.103);
+    position: relative;
+    overflow: hidden;
+    transition-duration: .3s;
+  }
+  
+
+  
+
+  .Btn::before {
+    width: 130px;
+    height: 130px;
+    position: absolute;
+    content: "";
+    background-color: white;
+    border-radius: 50%;
+    left: -100%;
+    top: 0;
+    transition-duration: .3s;
+    mix-blend-mode: difference;
+  }
+  
+  .Btn:hover::before {
+    transition-duration: .3s;
+    transform: translate(100%,-50%);
+    border-radius: 0;
+  }
+  
+  .Btn:active {
+    transform: translate(5px,5px);
+    transition-duration: .3s;
+  }
