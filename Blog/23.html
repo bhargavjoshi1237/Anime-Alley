@@ -371,7 +371,7 @@ $("#pux").attr("href", "/blog/"+Object.keys(data).length-2)
 for (let i = 1; i < 9; i++) {
  
   console.log(i)
-  $("#recx"+i).attr("href","animealley.online/blog/"+parseInt(Object.keys(data).length-i))
+  $("#recx"+i).attr("href","/blog/"+parseInt(Object.keys(data).length-i))
   $('#px'+i).text(data[Object.keys(data).length-i]["Title"])
   
   // $("#dx"+i).css("background-image", "url(" + data[Object.keys(data).length-i]["img"] + ")");
