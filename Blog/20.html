@@ -917,15 +917,38 @@ $('#nup').text("NEXT - "+data[Object.keys(data).length-2]["Title"])
 $('#pup').text("PREVIOUS - "+data[Object.keys(data).length-1]["Title"])
 $("#nux").attr("href", "/blog/"+Object.keys(data).length-1)
 $("#pux").attr("href", "/blog/"+Object.keys(data).length-2)
-for (let i = 1; i < 9; i++) {
- 
-  console.log(i)
-  $("#recx"+i).attr("href","/blog/"+parseInt(Object.keys(data).length-i))
-  $('#px'+i).text(data[Object.keys(data).length-i]["Title"])
-  
-  // $("#dx"+i).css("background-image", "url(" + data[Object.keys(data).length-i]["img"] + ")");
-  $("#ix"+i).attr("src",data[Object.keys(data).length-i]["img"]);
-}
+
+console.log(data[Object.keys(data).length-1]["Title"])
+console.log(data[Object.keys(data).length-1]["img"])
+$('#nup').text("NEXT - "+data[Object.keys(data).length-2]["Title"])
+$('#pup').text("PREVIOUS - "+data[Object.keys(data).length-1]["Title"])
+$("#nux").attr("href", "/blog/"+Object.keys(data).length-1)
+$("#pux").attr("href", "/blog/"+Object.keys(data).length-2)
+
+$('#px1').text(data[Object.keys(data).length-1]["Title"])
+$("#ix1").attr("src",data[Object.keys(data).length-1]["img"]);
+$("#recx1").attr("href",data[Object.keys(data).length-1]["Links"])
+$('#px2').text(data[Object.keys(data).length-2]["Title"])
+$("#ix2").attr("src",data[Object.keys(data).length-2]["img"]);
+$("#recx3").attr("href",data[Object.keys(data).length-2]["Links"])
+$('#px4').text(data[Object.keys(data).length-3]["Title"])
+$("#ix4").attr("src",data[Object.keys(data).length-3]["img"]);
+$("#recx4").attr("href",data[Object.keys(data).length-3]["Links"])
+$('#px5').text(data[Object.keys(data).length-4]["Title"])
+$("#ix5").attr("src",data[Object.keys(data).length-4]["img"]);
+$("#recx5").attr("href",data[Object.keys(data).length-4]["Links"])
+$('#px6').text(data[Object.keys(data).length-5]["Title"])
+$("#ix6").attr("src",data[Object.keys(data).length-5]["img"]);
+$("#recx6").attr("href",data[Object.keys(data).length-5]["Links"])
+$('#px7').text(data[Object.keys(data).length-6]["Title"])
+$("#ix7").attr("src",data[Object.keys(data).length-6]["img"]);
+$("#recx7").attr("href",data[Object.keys(data).length-6]["Links"])
+$('#px8').text(data[Object.keys(data).length-7]["Title"])
+$("#ix8").attr("src",data[Object.keys(data).length-7]["img"]);
+$("#recx8").attr("href",data[Object.keys(data).length-7]["Links"])
+$('#px9').text(data[Object.keys(data).length-8]["Title"])
+$("#ix9").attr("src",data[Object.keys(data).length-8]["img"]);
+$("#recx1").attr("href",data[Object.keys(data).length-8]["Links"])
 
 
 })
