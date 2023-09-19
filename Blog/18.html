@@ -889,14 +889,14 @@ $('#nup').text("NEXT - "+data[Object.keys(data).length-2]["Title"])
 $('#pup').text("PREVIOUS - "+data[Object.keys(data).length-1]["Title"])
 $("#nux").attr("href", "/blog/"+Object.keys(data).length-1)
 $("#pux").attr("href", "/blog/"+Object.keys(data).length-2)
-for (let i = 1; i < 9; i++) {
+ for (let i = Object.keys(data).length-8; i < Object.keys(data).length; i++) {
  
   console.log(i)
-$("#recx"+i).attr("href","/blog/"+i))
-  $('#px'+i).text(data[Object.keys(data).length-i]["Title"])
+ $("#recx"+i).attr("href",data[i]["Title"])
+  $('#px'+i).text(data[i]["Title"])
   
   // $("#dx"+i).css("background-image", "url(" + data[Object.keys(data).length-i]["img"] + ")");
-  $("#ix"+i).attr("src",data[Object.keys(data).length-i]["img"]);
+  $("#ix"+i).attr("src",data[i]["img"]);
 }
 
 
