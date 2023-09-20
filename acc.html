@@ -102,7 +102,10 @@
 <script>
 var url_string = window.location;
 var url = new URL(url_string);
-console.log(url.toString().split('#')[1].split('&')[1]).replace("access_token=", "");
+x = (url.toString().split('#')[1].split('&')[1])
+x = x.replace("access_token=", "")
+x = x.split('&')[0];
+console.log(x)
 
   
 </script>
