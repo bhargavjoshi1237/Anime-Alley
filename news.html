@@ -105,7 +105,7 @@
   var page = path.split("/").pop();
   console.log(page);
   ido = page.replace('.html', '');
-  fetch('https://rqofwwicqtfvsepuqjgq.supabase.co/rest/v1/Blogs?select=*', {
+  fetch('https://rqofwwicqtfvsepuqjgq.supabase.co/rest/v1/Blogs?select=*&order=IR', {
     headers: {
       'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJxb2Z3d2ljcXRmdnNlcHVxamdxIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTY5NDk4MTY0OCwiZXhwIjoyMDEwNTU3NjQ4fQ.KbppUj7lq87JhqTSwF8abix47ofv3enf1kdE6i9DMyc',
       'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJxb2Z3d2ljcXRmdnNlcHVxamdxIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTY5NDk4MTY0OCwiZXhwIjoyMDEwNTU3NjQ4fQ.KbppUj7lq87JhqTSwF8abix47ofv3enf1kdE6i9DMyc'
