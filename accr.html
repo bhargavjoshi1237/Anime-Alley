@@ -69,41 +69,18 @@
 
   <center>
     <br>
-    <!-- <h1 style="color: white; font-family: 'Open'; font-size: 25px;">Anime Alley Blog</h1> -->
-    <br>
-  <!-- <button onclick="loging()"><a href="https://rqofwwicqtfvsepuqjgq.supabase.co/auth/v1/authorize?provider=google">Login With Google</a></button> -->
 
-  <div id="war" class="alert alert-danger" role="alert">
-    Wrong Password!
-  </div>
- </div>
-<div id="suc" class="alert alert-success" role="alert">
-   Sign In Sucsessful
-  </div>
- 
+   <div class="float-start row" style="margin-right: 20px;  width: 100%;">
+<div class="col-sm">
+    <h3 class="float-right" style="font-family: 'Open'; color: white;">Hello!</h3><br><br>
+    <h5 class="float-right" id="email" style="font-family: 'Open'; color: white;"></h5></div>
 
-  <div class="login-box">
-    <p class="xp">Join Anime Alley</p>
-    <br>
-    <form>
-      <div class="user-box">
-        <input id="email" required="" name="" type="email">
-        <label>Email</label>
-      </div>
-      <div class="user-box">
-        <input id="pass" required="" name="" type="password">
-        <label>Password</label>
-      </div>
-      <a class="xp" onclick="trylogin()">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        Submit
-      </a>
-    </form>
-   
-  </div>
+
+   </div>
+   <br>
+   <br>
+<h5 class="" style="font-family: 'Open'; color: white;">Hear Are All Your Bookmarks</h5>
+<div class="col-sm" id="bkm"></div>
     
     <br>
     <br>
@@ -126,27 +103,13 @@
 
 </script>
 <script>
-
-var url_string = window.location;
-var url = new URL(url_string);
-
-
+console.log(sessionStorage.getItem("email"))
   
 </script>
 <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
 
-<script>
-  if (sessionStorage.getItem("email") == null) {
-    
-  }
-  else{
-    window.location = "accr.html";
-  }
- $("#suc").hide();
- $("#war").hide();
-
-  function trylogin() {
-  
+<script> 
+  $('#email').text(sessionStorage.getItem("email"))
     fetch('https://rqofwwicqtfvsepuqjgq.supabase.co/rest/v1/Email Pass?select=email&order=IR', {
   headers: {
     'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJxb2Z3d2ljcXRmdnNlcHVxamdxIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTY5NDk4MTY0OCwiZXhwIjoyMDEwNTU3NjQ4fQ.KbppUj7lq87JhqTSwF8abix47ofv3enf1kdE6i9DMyc',
@@ -160,10 +123,10 @@ return response.json();
 .then(function (data) {
 
 for (let i = 0; i < Object.keys(data).length; i++) {
-  if (data[i]["email"] == $("#email").val()) {
+  if (data[i]["email"] == sessionStorage.getItem("email")) {
     console.log("Found On "+i)
 
-    fetch('https://rqofwwicqtfvsepuqjgq.supabase.co/rest/v1/Email Pass?select=pass', {
+    fetch('https://rqofwwicqtfvsepuqjgq.supabase.co/rest/v1/Email Pass?select=bookmarks&order=IR', {
   headers: {
     'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJxb2Z3d2ljcXRmdnNlcHVxamdxIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTY5NDk4MTY0OCwiZXhwIjoyMDEwNTU3NjQ4fQ.KbppUj7lq87JhqTSwF8abix47ofv3enf1kdE6i9DMyc',
     'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJxb2Z3d2ljcXRmdnNlcHVxamdxIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTY5NDk4MTY0OCwiZXhwIjoyMDEwNTU3NjQ4fQ.KbppUj7lq87JhqTSwF8abix47ofv3enf1kdE6i9DMyc'
@@ -174,17 +137,12 @@ for (let i = 0; i < Object.keys(data).length; i++) {
 return response.json();
 })
 .then(function (data) {
-if (data[i]["pass"] == $("#pass").val()) {
-  console.log("Login Sucsessful")
-  sessionStorage.setItem("email", $("#email").val());
-
-  showsuc();
   
-}
-else{
-  console.log("Wrong Password!")
-  showwar();
-}
+  for (let i = 0; i <Object.keys(data[i]["bookmarks"].split(",")).length; i++) {
+    
+    console.log(data[i]["bookmarks"])
+    
+  }
 })
 
   }
@@ -194,21 +152,9 @@ else{
 
 
 })
-  }
+  
 
-  function showwar(text) {
-    $("#war").show();
-    setTimeout(function() { $("#war").fadeOut(); }, 2000);
-    
-  }
 
-  function showsuc(text) {
-    $("#suc").show();
-    setTimeout(function() { $("#suc").fadeOut(); 
-    window.location = "accr.html";
-  }, 2000);
-    
-  }
 
 </script>
 
