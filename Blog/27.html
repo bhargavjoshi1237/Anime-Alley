@@ -1058,20 +1058,20 @@
     </div>
 
     </div>
-    <div id="ala" class="alert alert-success alert-dismissible fade show" role="alert">
-      <strong>Submitted!</strong> Your Comment Is Successfully Submitted, Please Consider To Login.
+    <div id="ala" class="alert alert-warning alert-dismissible fade show" role="alert">
+      <strong>Holy guacamole!</strong> You should check in on some of those fields below.
       <button onclick="closeal()" type="button" class="close" data-dismiss="alert" aria-label="Close">
         <span aria-hidden="true">&times;</span>
       </button>
     </div>
-  <div style="width: 65%;"> <h4 class="float-start" style=" color: white; font-family: 'Open';"> Comments</h4></div>
+  <div style="width: 75%;"> <h4 class="float-start" style=" color: white; font-family: 'Open';"> Comments</h4></div>
   <br>
     <br>
     <div class="form-control" style="height: fit-content; width: 68%; background-color: #212121;border-color: #212121;">
       <input id="type" class="op op-alt" placeholder="Your Comment" required="" type="text">
       <span class="op-border op-border-alt"></span>
     </div>
-    <div style="width: 67%;">
+    <div style="width: 75%; height: fit-content;">
 <br>
 <div class="float-right pop" style="margin-right: 20px; height: 35px; width: 100px; border-radius: 20px; border-color: white; border-width: thin; border-style: solid;" onclick="submitcoment()">
 
@@ -1083,7 +1083,7 @@
 <br>
 <br>
 <br>
-<div id="comms" class="col-sm" style="width: 70%; margin-top: 10px;">
+<div id="comms" class="col-sm" style="width: 80%; margin-top: 10px; height: fit-content; margin-bottom: 10px;">
   <!-- <div class="row" style="width: 100%; height: 100px; ">
   <img src="https://img.icons8.com/external-others-inmotus-design/67/external-B-alphabet-others-inmotus-design-20.png" alt="" style="width: 83px; height: 60%; margin-top: 20px; margin-left: 5px;">
     <div class="col-sm float-start" style="margin-top: 10px;">
@@ -1350,7 +1350,7 @@ return response.json();
 let total = (Object.keys(data[ido-1]["comments"].split(",")).length)
 for (let i = 1; i < total; i++) {
 
-  $('#comms').append('<div class="row" style="width: 100%; height: 100px; "> <img src="https://img.icons8.com/external-others-inmotus-design/67/external-'+data[ido-1]["comments"].split(",")[i].charAt(0).toUpperCase()+'-alphabet-others-inmotus-design-20.png" alt="" style="width: 83px; height: 60%; margin-top: 20px; margin-left: 5px;"> <div class="col-sm float-start" style="margin-top: 10px;"> <h3 style="color: white; font-size: 20px; margin-top: 10px; font-family: '+'Openr'+'; " class="float-start">Annonimus</h3><br><br> <p class="float-start xp">'+data[ido-1]["comments"].split(",")[i]+'</p> </div> <br> </div>');
+  $('#comms').append('<div class="row" style="width: 100%; height: fit-content; "> <img src="https://img.icons8.com/external-others-inmotus-design/67/external-'+data[ido-1]["comments"].split(",")[i].charAt(0).toUpperCase()+'-alphabet-others-inmotus-design-20.png" alt="" style="width: 83px; height: fit-content; margin-top: 20px; margin-left: 5px;"> <div class="col-sm float-start" style="margin-top: 10px; margin-bottom: 10px;"> <h3 style="color: white; font-size: 20px; margin-top: 10px; font-family: '+'Openr'+'; " class="float-start">Annonimus</h3><br><br> <p class="float-start xp">'+data[ido-1]["comments"].split(",")[i]+'</p> </div> <br> </div>');
   
 }
   coms = (data[ido-1]["comments"])
@@ -1429,7 +1429,7 @@ return response.json();
 let total = (Object.keys(data[ido-1]["comments"].split(",")).length)
 for (let i = 1; i < total; i++) {
 
-  $('#comms').append('<div class="row" style="width: 100%; height: 100px; "> <img src="https://img.icons8.com/external-others-inmotus-design/67/external-'+data[ido-1]["comments"].split(",")[i].charAt(0).toUpperCase()+'-alphabet-others-inmotus-design-20.png" alt="" style="width: 83px; height: 60%; margin-top: 20px; margin-left: 5px;"> <div class="col-sm float-start" style="margin-top: 10px;"> <h3 style="color: white; font-size: 20px; margin-top: 10px; font-family: '+'Openr'+'; " class="float-start">Annonimus</h3><br><br> <p class="float-start xp">'+data[ido-1]["comments"].split(",")[i]+'</p> </div> <br> </div>');
+  $('#comms').append('</div><div class="row" style=" width: 100%; height: fit-content; margin-bottom:20px; margin-bottom: 20px;"> <img src="https://img.icons8.com/material/48/FFFFFF/circled-'+data[ido-1]["comments"].split(",")[i].charAt(0).toUpperCase()+'.png" alt="" style="width: 83px; height: 60%; margin-top: 20px; margin-left: 5px;"> <div class="col-sm float-start" style="margin-top: 10px; margin-bottom:20px"> <h3 style="color: white; font-size: 20px; margin-top: 10px; font-family: '+'Openr'+'; " class="float-start">Annonimus</h3><br><br> <p class="float-start xp">'+data[ido-1]["comments"].split(",")[i]+'</p> </div> <br> </div><br><br>');
   
 }
   coms = (data[ido-1]["comments"])
